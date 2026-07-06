@@ -60,6 +60,12 @@
     collection, addDoc, getDocs, doc, updateDoc, deleteDoc
   } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 
+  // TEMPORARY DEBUG EXPOSURE - remove after troubleshooting
+  window.debugDb = db;
+  window.debugAuth = auth;
+  window.debugAddDoc = addDoc;
+  window.debugCollection = collection;
+
   const itemsRef = collection(db, "items");
 
   // --- Auth gate: only logged-in admins see the dashboard ---
