@@ -66,6 +66,10 @@
 
     </a>
 
+    <div class="translate-widget">
+        <div id="google_translate_element"></div>
+    </div>
+
     <div class="hamburger">
 
         <span></span>
@@ -766,6 +770,18 @@ Friendly assistance before and after every purchase.
 ↑
 
 </button>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,ta,hi,te,ml,kn,fr,de,es,ar,zh-CN,ja',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script src="script.js"></script>
 
