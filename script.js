@@ -225,9 +225,11 @@ function googleTranslateElementInit() {
         autoDisplay: false
     }, 'google_translate_element');
 }
-// script.js
+
+// ================= FIREBASE AUTH CHECK =================
 import { auth, db } from "./firebase-config.js"; 
-import { onAuthStateChanged } from "firebase/auth";
+// FIXED: Changed bare import to the CDN web URL matching your config version
+import { onAuthStateChanged } from "https://gstatic.com";
 
 // Track login state to update your UI
 onAuthStateChanged(auth, (user) => {
