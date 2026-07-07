@@ -289,6 +289,26 @@ font-weight:600;
 
 }
 
+/* Hide Google Translate banner so it doesn't cover the page */
+html,
+body {
+	top: 0 !important;
+}
+
+.skiptranslate,
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate {
+	display: none !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	overflow: hidden !important;
+}
+
+body > .skiptranslate,
+body > .goog-te-banner-frame {
+	display: none !important;
+}
+
 /* Hamburger */
 
 .hamburger{
