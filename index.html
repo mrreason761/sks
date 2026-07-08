@@ -412,15 +412,22 @@ Friendly assistance before and after every purchase.
                 listDiv.appendChild(card);
             });
         } catch (err) {
-            listDiv.innerHTML = "<p style='color:red;'>Failed to load live items.</p>";
-            // Run inventory fetching immediately
+            console.error("Error loading products:", err);
+            listDiv.innerHTML = "<p>Failed to load products. Please try again later.</p>";
+        }
+    }
+
+    // Call the function to load products on page load
     loadPublicItems();
 </script>
 
-<!-- Link main script logic safely as an ECMAScript module -->
-<script type="module" src="script.js"></script>
+<!-- ================= GOOGLE TRANSLATE SCRIPT ================= -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://google.com"></script>
 
-<!-- Embedded Google Translate Core Engine Loader -->
-<script src="https://google.com"></script>
 </body>
 </html>
